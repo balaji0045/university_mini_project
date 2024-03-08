@@ -1,0 +1,58 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6aa8db;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 100vw;
+
+}
+.appoinmentform >form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid black;
+  padding: 30px;
+  /* border-radius: 40px; */
+  box-shadow: 4px 4px 4px 4px #6e6c6c;
+  background-color: white;
+
+}
+input,select{
+  padding: 1em 0 0.5em 0.5em;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  
+
+}
+#selectdoctor option{
+  font-size: 20px;
+  border: 1px solid black;
+  
+}
+option{
+  padding: 20px;
+}
+#submit{
+  width: 150px;
+  height: 40px;
+  background-color: greenyellow;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium';
+}
+#submit:hover{
+  background-color: rgb(130, 180, 54);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="appoinment.css">
+  <title>Appoinment Form</title>
+</head>
+<body>
+  <div id="container">
+          <div id="leftsideimage">
+            <img src="appoinment images/appoinment-form-lady-doctor.png" alt="" height="600px">
+          </div>
+          <div class="appoinmentform">
+            <form action="/saveAppointment" method="post">
+               <h1>Appoinment Form</h1>
+              <input type="text" placeholder="Full Name" id="name" name="patientName">
+              <input type="number" placeholder="age" id="age" name="age">
+              <input type="text" id="phonenumber" placeholder="Phone Number" name="phoneNumber">
+                <div id="selectdoctor">
+
+                  <select name="selectedDoctor" id="selectdoctor" >
+                    <option disabled selected value="">Select a doctors</option>
+                    <option value="Dr. Balaji">Dr.balaji,MBBS,M.S,M.D</option>
+                    <option value="Dr.Vinoth">Dr.vinoth,MBBS,M.S,M.D</option>
+                    <option value="Dr.Ram">Dr.ram,MBBS,M.S,M.D</option>
+                    <option value="Dr.Peter">Dr.peter,MBBS,M.S,M.D</option>
+                    <option value="Dr.Adam">Dr.Adam,MBBS,M.S,M.D</option>
+                  </select>
+
+                </div>
+                 <div class="date">
+                  <input type="date" placeholder="date" id="date" name="date">
+                  </div>
+                  <div class="time">
+                    <input type="time" placeholder="time" id="time" name="time">
+                  </div>
+                  <input type="submit" value="Submit form" id="submit">
+
+            </form>
+          </div>
+
+          <div id="secondimg">
+            <img src="appoinment images/appoinment-form-lady-doctor-2.png" alt="">
+          </div>
+
+  </div>
+  <script src="javascript folder/appoinment.js"></script>
+</body>
+</html>
