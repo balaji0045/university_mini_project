@@ -24,18 +24,56 @@
           </div>
 
 </div> 
-            <form action="" id="contactform">
+            <form action="" id="contactform" onsubmit="Emailsend(); reset(); return false;">
             <h1>Fill The form</h1>  
             <input type="text" id="name" name="name" placeholder="FullName">
             <input type="email" placeholder="Email" id="email" name="email">
            <input type="tel" placeholder="Mobile Number" id="mobilenumber">
-            <textarea name="Comments" id="" cols="30" rows="10" placeholder="Enter A Comments" class="default-text">Enter your comments here... </textarea>
+            <textarea name="Comments" id="textarea1" cols="30" rows="10" placeholder="Enter A Comments" class="default-text">Enter your comments here... </textarea>
             <input type="submit" value="Submit" id="submit">
          
           </form>
        </div>
   </div>
   <script type="module" src="javascript folder/contactus.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+  
+    
+  <script>
+      
+  
+      
+      function Emailsend() {
+    let name=document.getElementById('name').value;
+  let email=document.getElementById("email").value;
+  let number=document.getElementById("mobilenumber").value;
+  let comment=document.getElementById("textarea1").value;
+  let ebody=`
+  <b>Name:</b>${name}
+  <br>
+   <b>Email:</b>${email}
+   <br>
+   <b>Phone number</b>${number}
+   <br>
+   <b>Comments:</b>${comment}
+   <br>`
+// ---------------------------------------------------------------------
+
+    Email.send({
+    SecureToken : "d35aa663-b52d-443a-b033-d70c870d308f",
+    To : 'dbalaji467@gmail.com',
+    From : "dbalaji467@gmail.com",
+    Subject : "This is the subject" + email,
+    Body : ebody
+}).then(
+  message => alert(message)
+);
+    
+      }
+  
+  </script>
   
 </body>
 </html>

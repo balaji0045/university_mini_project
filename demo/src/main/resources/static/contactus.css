@@ -74,8 +74,8 @@ background-color: rgb(61, 223, 61);
  #para p{
   font-family:serif;
   font-weight: 500;
-  word-wrap: wrap;
-  
+  text-wrap: nowrap; 
+  word-wrap: nowrap; 
 
 }
 #para p::first-letter{
