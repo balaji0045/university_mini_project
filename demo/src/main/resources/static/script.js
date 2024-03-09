@@ -57,19 +57,19 @@ function toggleOptions(id) {
   options.classList.toggle('show-options');
 }
 //  This is redirect to another page
-
+//
 // document.getElementById("redirect").addEventListener("click", function() {
 //     var correctNumber = 123; // Change this to your correct number
-    
+//
 //    // Prompt the user to enter a number
 //     var userInput = prompt("Please enter the correct number:");
-    
+//
 //     // Check if the entered number is correct
 //     if (userInput !== null && parseInt(userInput) === correctNumber) {
 //         // If correct, redirect to the personal page
 //         console.log("Redirecting...");
-
-//         window.location.href = "login.html"; // Change the URL to your personal page
+//
+//         window.location.href = "/signup"; // Change the URL to your personal page
 //     } else {
 //         // If incorrect or canceled, do something else (e.g., display an error message)
 //         alert("Incorrect number entered. Please try again.");

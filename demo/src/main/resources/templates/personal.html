@@ -1,32 +1,173 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Page</title>
-  <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
+  <title>Doctor's Portal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="personal.css">
+ 
 </head>
 <body>
-<h1>Welcome to Your Personal Page</h1>
-<p>This is a sample personal page.</p>
-<!-- Add more dynamic content using Thymeleaf expressions -->
-<p th:text="'Hello, ' + ${user.username} + '!'" th:if="${user != null}"></p>
+    <div id="container">
+  <nav>
+    <img src="banner images/logo.png" alt="">
+    <div id="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#drugscontainer">Drugs List</a></li>
+        <li><a href="#timetablecontainer">Time Table</a></li>
+        <li><a href="/" id="logout">Logout </a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  <div id="homepagecontent" class="content">
 
+    <h1>Welcome To Your Doctors Login portal...</h1>
+    <p th:text="'Hello, ' + ${user.username} + '!'" th:if="${user != null}"></p>
+    
+        
+  </div>
+  <footer>
+    <div id="logos">
+      <ul>
+        <li><a href="#" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
+        <li><a href="#" id="face"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#" id="face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#" id="insta"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+        <li><a href="#" id="face"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+        
+      </ul>
+    </div>
+  </footer>
 
-
+      </div>
+      <div id="timetablecontainer">
+         <div id="headtimetable">
+          <h1>This Time Table For <span id="mark">Out Patient </span> Schedule:</h1>
+         </div>
+         <br>
+         <div id="tablecontent">
+          <table id="timetable">
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+            <tr>
+              <td>9:00 - 12:00</td>
+              <td class="doctor">Dr.Balaji MBBS,M.S,M.D</td>
+              <td class="doctor">Dr.Ranjith Kumar MBBS</td>
+              <td class="doctor">Dr.Vasanth Kumar MBBS</td>
+              <td class="doctor">Dr.Jagadeswaran MBBS</td>
+              <td class="doctor">Dr.Manikandan MBBS</td>
+              <td class="doctor">Dr.DilliBabu MBBS</td>
+              <td class="doctor">Dr.Balaji MBBS,M.S,M.D</td>
+            </tr>
+            <tr>
+              <td>12:00 - 13:00</td>
+              <td colspan="7">Lunch</td>
+            </tr>
+            <tr>
+              <td>13:00 - 15:00</td> 
+              <td class="doctor">Dr.Ranjith Kumar MBBS</td>
+              <td class="doctor">Dr.Vasanth Kumar MBBS</td>
+              <td class="doctor">Dr.Jagadeswaran MBBS</td>
+              <td class="doctor">Dr.Manikandan MBBS</td>
+              <td class="doctor">Dr.DilliBabu MBBS</td>
+              <td class="doctor">Dr.Balaji MBBS,M.S,M.D</td>
+              <td class="doctor">Dr.Ranjith Kumar MBBS</td>
+            </tr>
+            <tr>
+              <td>15:00 - 18:00</td>
+              <td class="doctor">Dr.Vasanth Kumar MBBS</td>
+              <td class="doctor">Dr.Jagadeswaran MBBS</td>
+              <td class="doctor">Dr.Manikandan MBBS</td>
+              <td class="doctor">Dr.DilliBabu MBBS</td>
+              <td class="doctor">Dr.Balaji MBBS,M.S,M.D</td>
+              <td class="doctor">Dr.Ranjith Kumar MBBS</td>
+              <td class="doctor">Dr.Vasanth Kumar MBBS</td>
+              
+             
+               </tr>
+            <tr>
+              <td>18:00 - 24:00</td>
+              <td class="doctor">Dr.Balaji MBBS,M.S,M.D</td>
+              <td class="doctor">Dr.Ranjith Kumar MBBS</td>
+              <td class="doctor">Dr.Vasanth Kumar MBBS</td>
+              <td class="doctor">Dr.Jagadeswaran MBBS</td>
+              <td class="doctor">Dr.Manikandan MBBS</td>
+              <td class="doctor">Dr.DilliBabu MBBS</td>
+              <td class="doctor">Dr.Balaji MBBS,M.S,M.D</td>
+            
+              
+            </tr>
+            <tr>
+              <td>night shift</td>
+              <td colspan="7">Emergency Ward</td>
+              
+            </tr>
+          </table>
+          
+         </div>
+        
+      </div>
+      <div id="drugscontainer">
+        <div id="drugsheadingarea">
+          <h1>These Are Available Drugs List In The Pharmacy:</h1>
+        </div>
+        <div id="drugslist">
+          <ul>
+            <li>Paracetamol: 500 mg, 1000 mg</li>
+            <li>Ibuprofen: 200 mg, 400 mg</li>
+            <li>Aspirin: 81 mg, 325 mg</li>
+            <li>Amoxicillin: 250 mg, 500 mg</li>
+            <li>Ciprofloxacin: 250 mg, 500 mg</li>
+            <li>Metformin: 500 mg, 1000 mg</li>
+            <li>Atorvastatin: 10 mg, 20 mg</li>
+            <li>Amlodipine: 5 mg, 10 mg</li>
+            <li>Omeprazole: 20 mg, 40 mg</li>
+            <li>Ranitidine: 150 mg, 300 mg</li>
+            <li>Diazepam: 2 mg, 5 mg</li>
+            <li>Morphine: 10 mg, 30 mg</li>
+            <li>Furosemide: 20 mg, 40 mg</li>
+            <li>Warfarin: 1 mg, 5 mg</li>
+            <li>Insulin: Varies</li>
+            <li>Hydrochlorothiazide: 12.5 mg, 25 mg</li>
+            <li>Albuterol (salbutamol): Inhaler: 90 mcg/puff</li>
+            <li>Lisinopril: 5 mg, 10 mg</li>
+            <li>Clopidogrel: 75 mg</li>
+            <li>Simvastatin: 10 mg, 20 mg</li>
+            <li>Acetaminophen: 325 mg, 500 mg</li>
+            <li>Clarithromycin: 250 mg, 500 mg</li>
+            <li>Cephalexin: 250 mg, 500 mg</li>
+            <li>Diphenhydramine: 25 mg, 50 mg</li>
+            <li>Loratadine: 10 mg</li>
+            <li>Risperidone: 1 mg, 2 mg</li>
+            <li>Levothyroxine: 25 mcg, 50 mcg</li>
+            <li>Alprazolam: 0.25 mg, 0.5 mg</li>
+            <li>Fluoxetine: 10 mg, 20 mg</li>
+            <li>Tetracycline: 250 mg, 500 mg</li>
+    
+        </ul>
+    
+        </div>
+      </div>
+      
+      <div id="backtotop">
+        <br>
+        <a href="#">Back To Top</a>
+      </div>
 
 </body>
 </html>
