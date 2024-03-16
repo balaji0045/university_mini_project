@@ -6,8 +6,8 @@
 FROM openjdk:17-jdk-alpine
 
 # ARG for specifying JAR file during build
-ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
-
+#ARG JAR_FILE=target/demo-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/*.jar
 # Copy the JAR file from the target directory to the container
 COPY ${JAR_FILE} app.jar
 
