@@ -16,7 +16,22 @@
 # Define the entry point for the container
 #ENTRYPOINT ["java", "-jar", "/app.jar"]
 #FROM openjdk:17-jdk-alpine
-FROM eclipse-temurin:17-jdk-alpine
+# Use a Java base image from Docker Hub
+FROM docker.io/openjdk:17-windowsservercore
+
+# Set the volume for temporary files (if needed)
+VOLUME /tmp
+
+# Set the argument for the JAR file
+ARG JAR_FILE
+
+# Copy the JAR file into the container
+COPY ${JAR_FILE} app.jar
+
+# Specify the entry point for running the application
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+
+
 
 VOLUME /tmp
 ARG JAR_FILE
