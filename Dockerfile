@@ -20,7 +20,7 @@
 FROM docker.io/openjdk:17-windowsservercore
 
 # Set the volume for temporary files (if needed)
-VOLUME /tmp
+
 
 # Set the argument for the JAR file
 ARG JAR_FILE
