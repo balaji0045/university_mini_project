@@ -15,9 +15,9 @@
 
 # Define the entry point for the container
 #ENTRYPOINT ["java", "-jar", "/app.jar"]
-#FROM openjdk:17-jdk-alpine
+FROM openjdk:17-jdk-alpine
 # Use a Java base image from Docker Hub
-FROM docker.io/openjdk:17-windowsservercore
+#FROM docker.io/openjdk:17-windowsservercore
 
 # Set the volume for temporary files (if needed)
 
