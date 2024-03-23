@@ -26,8 +26,8 @@ FROM openjdk:17-jdk-alpine
 ARG JAR_FILE
 
 # Copy the JAR file into the container
-COPY ${JAR_FILE} app.jar
-
+#COPY ${JAR_FILE} app.jar
+COPY target/demo-0.0.1.jar app.jar
 # Specify the entry point for running the application
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 
